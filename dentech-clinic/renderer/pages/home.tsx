@@ -8,20 +8,31 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { SmileIcon as Tooth } from "lucide-react"
 
-
 export default function HomePage() {
-   const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [rememberMe, setRememberMe] = useState(false)
   const router = useRouter()
 
+  // Credenciais de teste
+  const testCredentials = {
+    email: "teste@odontologia.com",
+    password: "123456",
+  }
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aqui será integrada a API de autenticação
-    router.push("/dashboard")
+    // Verifica se as credenciais estão corretas
+    if (email === testCredentials.email && password === testCredentials.password) {
+      // Redireciona para dashboard
+      router.push("/dashboard/page")
+    } else {
+      alert("Email ou senha inválidos. Tente novamente.")
+    }
   }
+
   return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
