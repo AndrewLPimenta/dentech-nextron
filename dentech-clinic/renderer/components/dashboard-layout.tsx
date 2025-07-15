@@ -24,15 +24,15 @@ import {
 import { cn } from "@/lib/utils"
 
 const navigation = [
-  { name: "Dashboard", href: "/dashboard", icon: Home },
-  { name: "Pacientes", href: "/patients", icon: Users },
-  { name: "Prontuário", href: "/medical-records", icon: FileText },
-  { name: "Agendamento", href: "/appointments", icon: Calendar },
-  { name: "Financeiro", href: "/financial", icon: DollarSign },
-  { name: "Tratamentos", href: "/treatments", icon: Activity },
-  { name: "Profissionais", href: "/professionals", icon: UserCheck },
-  { name: "Relatórios", href: "/reports", icon: BarChart3 },
-  { name: "Segurança", href: "/security", icon: Shield },
+  { name: "Dashboard", href: "/dashboard/page", icon: Home },
+  { name: "Pacientes", href: "/patients/page", icon: Users },
+  { name: "Prontuário", href: "/medical-records/page", icon: FileText },
+  { name: "Agendamento", href: "/appointments/page", icon: Calendar },
+  { name: "Financeiro", href: "/financial/page", icon: DollarSign },
+  { name: "Tratamentos", href: "/treatments/page", icon: Activity },
+  { name: "Profissionais", href: "/professionals/page", icon: UserCheck },
+  { name: "Relatórios", href: "/reports/page", icon: BarChart3 },
+  { name: "Segurança", href: "/security/page", icon: Shield },
 ]
 
 interface DashboardLayoutProps {
