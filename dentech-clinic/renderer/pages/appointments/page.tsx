@@ -46,30 +46,30 @@ export default function AppointmentsPage() {
             <TabsTrigger value="bloqueios">Bloqueios</TabsTrigger>
             {showForm && <TabsTrigger value="form">Nova Consulta</TabsTrigger>}
           </TabsList>
-
           <TabsContent value="agenda">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-              <Card className="lg:col-span-1">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+              <Card className="lg:col-span-2">
                 <CardHeader>
                   <CardTitle className="text-lg">Calendário</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border" />
+                <CardContent className="flex justify-center w-full h-[auto]">
+                    <div className="flex justify-center"> 
+                  <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border w-full max-w-md" />
+                    </div>
                 </CardContent>
               </Card>
-
-              <Card className="lg:col-span-3">
+              <Card className="lg:col-span-2">
                 <CardHeader>
                   <CardTitle>Agenda do Dia - {date?.toLocaleDateString("pt-BR")}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="space-y-1">
                     {/* Horários do dia */}
                     <div className="grid gap-2">
                       {Array.from({ length: 10 }, (_, i) => {
                         const hour = 8 + i
                         return (
-                          <div key={hour} className="flex items-center space-x-4 p-3 border rounded-lg">
+                          <div key={hour} className="flex items-center space-x-2 p-3 border rounded-lg">
                             <div className="w-16 text-sm font-medium">{hour.toString().padStart(2, "0")}:00</div>
                             <div className="flex-1 text-muted-foreground">Horário disponível</div>
                             <Button size="sm" variant="outline">

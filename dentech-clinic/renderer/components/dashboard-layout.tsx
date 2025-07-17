@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Image from "next/image"
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
@@ -57,7 +57,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <div className="flex h-full flex-col">
             <div className="flex h-16 items-center px-6 border-b">
               <Tooth className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-lg font-semibold">Dental System</span>
+              <span className="ml-2 text-lg font-semibold">Dentech</span>
             </div>
             <nav className="flex-1 space-y-1 px-3 py-4">
               {navigation.map((item) => (
@@ -93,10 +93,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
       {/* Desktop sidebar */}
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
-        <div className="flex flex-col flex-grow bg-white border-r border-gray-200">
+        <div className="flex flex-col flex-grow bg-black border-r border-gray-200">
           <div className="flex h-16 items-center px-6 border-b">
-            <Tooth className="h-8 w-8 text-blue-600" />
-            <span className="ml-2 text-lg font-semibold">Dental System</span>
+            <div className="bg-green-00 p-2 rounded-full">
+              <Image src="/logo.png" alt="Logo Dentech" width={35} height={30} />
+            </div>
+            <span className="ml-3 text-xl font-semibold">Dentech</span>
           </div>
           <nav className="flex-1 space-y-1 px-3 py-4">
             {navigation.map((item) => (

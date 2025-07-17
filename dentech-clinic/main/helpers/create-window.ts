@@ -1,3 +1,6 @@
+import path from 'path'
+
+
 import {
   screen,
   BrowserWindow,
@@ -70,15 +73,17 @@ export const createWindow = (
 
   state = ensureVisibleOnSomeDisplay(restore())
 
-  const win = new BrowserWindow({
-    ...state,
-    ...options,
-    webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true,
-      ...options.webPreferences,
-    },
-  })
+const win = new BrowserWindow({
+  ...state,
+  ...options,
+  icon: path.join(__dirname, '/icon.ico'), // ⬅️ caminho do ícone
+  webPreferences: {
+    nodeIntegration: false,
+    contextIsolation: true,
+    ...options.webPreferences,
+  },
+})
+
 
   win.on('close', saveState)
 

@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
-import { SmileIcon as Tooth } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
   const [email, setEmail] = useState("")
@@ -36,12 +36,14 @@ export default function HomePage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <div className="bg-blue-600 p-3 rounded-full">
-              <Tooth className="h-8 w-8 text-white" />
+            <div className="bg-green-600 p-3 rounded-full">
+             
+             
+             <Image src="/logo.png" alt="Logo Dentech" width={60} height={60} />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold">Sistema Odontológico</CardTitle>
-          <CardDescription>Faça login para acessar o sistema de gestão</CardDescription>
+          <CardTitle className="text-2xl font-bold">DENTECH</CardTitle>
+          <CardDescription>Faça login para acessar o sistema</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">

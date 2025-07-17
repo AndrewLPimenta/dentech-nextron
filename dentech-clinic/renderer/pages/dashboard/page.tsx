@@ -70,7 +70,7 @@ export default function DashboardPage() {
     <DashboardLayout>
       <div className="space-y-6">
         <div>
-          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-muted-foreground">Dashboard</h1>
           <p className="text-muted-foreground">Bem-vindo ao sistema de gestão odontológica</p>
         </div>
 
